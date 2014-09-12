@@ -4,16 +4,11 @@
     $alert   = (isset($alert))  ?$alert  :"";
     $success = (isset($success))?$success:"";
     $erro    = (isset($erro))   ?$erro   :"";
-?><div id='messages'>
-    <div id='erro'    class='container-msg erro'><a href="#" class="close">×</a><div class="content-msg"><?php echo $erro; ?></div></div>
-    <div id='success' class='container-msg success'><a href="#" class="close">×</a><div class="content-msg"><?php echo $success; ?></div></div>
-    <div id='alert'   class='container-msg alert'><a href="#" class="close">×</a><div class="content-msg"><?php echo $alert; ?></div></div>
-    <div id='info'    class='container-msg info'><a href="#" class="close">×</a><div class="content-msg"><?php echo $info; ?></div></div>
-    <div id='popup'   class='popup'><a href="#" class="close">×</a><div class="content-msg"><?php echo $popup; ?></div></div>
-</div>
-<?php 
-//$this->Html->LoadJs('jqwatch');
+?><div id='_messages_container'>
+    <div class="alert alert-success <?php if($success === ""){echo "hidden";}?>" role="alert"><div class="content-msg"><?php echo $success; ?></div><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+    <div class="alert alert-info    <?php if($info === "")   {echo "hidden";}?>" role="alert"><div class="content-msg"><?php echo $info; ?></div><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+    <div class="alert alert-warning <?php if($alert === "")  {echo "hidden";}?>" role="alert"><div class="content-msg"><?php echo $alert; ?></div><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+    <div class="alert alert-danger  <?php if($erro === "")   {echo "hidden";}?>" role="alert"><div class="content-msg"><?php echo $erro; ?></div><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></div>
+</div><?php 
 $this->Html->LoadJs('lib/notificacao/messages');
-//$this->Html->LoadJqueryFunction('message_erro("fooo");');
-
-?>
+//$this->Html->LoadJqueryFunction('message_success("Uma falha aconteceu!");');
