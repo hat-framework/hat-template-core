@@ -9,6 +9,7 @@
     <meta property='og:title'           content="<?php  $this->LoadTags('page_title');?>" />
     <meta property='og:description'     content="<?php  $this->LoadTags('description');?>" />
     <meta property='og:image'           content="<?php  $this->LoadTags('image');?>" />
+    <meta name="expires" content="<?php echo \classes\Classes\timeResource::getDbDate("Y-m-d");?> 23:59:00"/>
     <?php echo $head;?>
     <link rel="shortcut icon" href="<?php $this->LoadTags('favicon');?>" type="image/x-icon" />
     <!-- Meta Tags Fim --> 
