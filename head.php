@@ -16,8 +16,8 @@
 
     <title><?php $this->LoadTags("page_title"); ?></title>
     <?php 
-        $this->Html->Start(); 
         $this->Html->LoadCss(array('bootstrap', 'style', 'components/menus', 'jquery.autocomplete'), "", false);
+        $this->Html->Start(); 
     ?>
     
 </head>
