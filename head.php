@@ -13,11 +13,8 @@
     <?php echo $head;?>
     <link rel="shortcut icon" href="<?php $this->LoadTags('favicon');?>" type="image/x-icon" />
     <!-- Meta Tags Fim --> 
-
     <title><?php $this->LoadTags("page_title"); ?></title>
     <?php 
-        $this->Html->LoadCss(array('bootstrap', 'style', 'components/menus', 'jquery.autocomplete'), "", false);
         $this->Html->Start(); 
     ?>
-    
 </head>
